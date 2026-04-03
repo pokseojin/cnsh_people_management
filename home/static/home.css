@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+
+.title{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(to right top, blue, green);
+}
+
+.cnsh_image{
+    width: 15%;
+    height: auto;
+}   
+
+.google_login_image{
+    margin-bottom: 5%;
+    width: 20%;
+    height: auto;
+}
+
+.contexts{
+    margin: 3%;
+}

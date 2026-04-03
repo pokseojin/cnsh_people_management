@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <link href="{% static 'cnsh_image.svg' %}" rel="shortcut icon" type="image/x-icon">
+    <title>CNSH_MANAGEMENT</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+  </head>
+  <body >
+    <div style="text-align: center;" class="title">
+      <img src="{% static 'cnsh_image.svg' %}" class="cnsh_image">
+      <h1 style="color:white">
+      CNSH_MANAGEMENT에 오신 것을 환영합니다!
+      </h1>
+    </div >
+      <h2 style="text-align: center;" class = "contexts">
+        <b>
+        로그인 버튼을 클릭해 시작하세요.
+        </b>
+      </h2>
+    <div style="text-align : center;">
+      <a href="{% url 'accounts:google_login' %}" >
+        <img class = "google_login_image" src="{% static 'web_light_rd_ctn.svg' %}">
+      </a>
+    </div>
+    
+  </body>
+</html>    
