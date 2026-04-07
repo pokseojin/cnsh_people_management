@@ -1,0 +1,84 @@
+body{
+    margin: 0px;
+}
+
+/* 상단 바 */
+.cnsh_image{
+    margin-left: 1%; 
+    display: block;
+    height: 70%;
+    width: auto;
+}
+.header{    
+    gap: 0;
+    position: sticky;
+    display: flex;             
+    /* flex-direction: column;     */
+    /* justify-content: center; */
+    align-items: center;    
+    width: 100%;
+    height: 10%;
+    background-image: linear-gradient(to right top, blue, green);
+}
+
+.header h1 {
+    margin: 0; 
+    margin-left: 1%; 
+}
+
+/* 탭 UI 제작 */
+.floor_selector {
+    margin-top: 3%;
+      width: 100%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.floors {
+      display: flex;
+      gap: 5px;
+}
+
+.floors label {
+    color: white
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background: blue;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    transition: background 0.3s;
+}
+
+/* 선택된 탭 강조 */
+#floor1:checked ~ .floors label[for="floor1"],
+#floor2:checked ~ .floors label[for="floor2"],
+#floor3:checked ~ .floors label[for="floor3"],
+#floor4:checked ~ .floors label[for="floor4"]
+{
+    background: green;
+    color: white;
+}
+
+/* 콘텐츠 박스 */
+.content {
+    border: 2px solid #333;
+    padding: 20px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+.tab-content {
+      display: none;
+}
+
+/* 선택된 탭만 표시 */
+#floor1:checked ~ .content .f1,
+#floor2:checked ~ .content .f2,
+#floor3:checked ~ .content .f3,
+#floor4:checked ~ .content .f4
+{
+    display: block;
+}

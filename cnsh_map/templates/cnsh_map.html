@@ -1,5 +1,41 @@
-<html>
-    <head>
-        <link href="{% static 'cnsh.png' %}" rel="shortcut icon" type="image/x-icon">
-    </head>
-</html>
+{% extends 'base.html' %}
+{% load static%}
+{% block static %}
+    <link rel="stylesheet" href="{% static 'cnsh_map.css' %}">
+{% endblock %}
+{% block content %}
+<body>
+    <span class="header">
+        <img src="{% static 'images/cnsh_image.svg' %}" class="cnsh_image">
+            <h1 style="color:white">
+                <font size="10%">
+                    CNSH MANAGEMENT
+                </font>
+            </h1>
+    </span>
+    <div>
+        <div class="floor_selector">
+            <input type="radio" id="floor1" name="tabs" checked>
+            <input type="radio" id="floor2" name="tabs">
+            <input type="radio" id="floor3" name="tabs">
+            <input type="radio" id="floor4" name="tabs">
+        
+            <div class="floors">
+                <label for="floor1">1층</label>
+                <label for="floor2">2층</label>
+                <label for="floor3">3층</label>
+                <label for="floor4">4층</label>
+            </div>
+            <div class="content">
+                <div class="tab-content f1">1층 사진</div>
+                <div class="tab-content f2">2층 사진</div>
+                <div class="tab-content f3">3층 사진</div>
+                <div class="tab-content f4">4층 사진</div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+{% endblock %}
