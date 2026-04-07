@@ -65,9 +65,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -135,9 +133,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-) 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'assets'), 
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # ACCOUNT_EMAIL_REQUIRED = True            # email 필드 사용 o
 # ACCOUNT_USERNAME_REQUIRED = True         # username 필드 사용 o
